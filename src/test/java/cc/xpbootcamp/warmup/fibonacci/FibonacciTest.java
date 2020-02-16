@@ -33,6 +33,15 @@ public class FibonacciTest {
         long actualValue = Fibonacci.calculate(position);
 
         assertEquals(expectedValue, actualValue);
+    }
 
+    @Test
+    void should_return_0_when_calculate_given_position_0() {
+        int position = 0;
+        long expectedValue = 0;
+
+        long actualValue = Fibonacci.calculate(position);
+
+        assertEquals(expectedValue, actualValue);
     }
 }

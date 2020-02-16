@@ -3,6 +3,7 @@ package cc.xpbootcamp.warmup.fibonacci;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FibonacciTest {
     @Test
@@ -53,5 +54,14 @@ public class FibonacciTest {
         long actualValue = Fibonacci.calculate(position);
 
         assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    void should_throw_exception_when_calculate_given_position__minus_1() {
+        int position = -1;
+
+        assertThrows(PositionNoValidException.class, () -> {
+           Fibonacci.calculate(position);
+        });
     }
 }

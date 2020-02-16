@@ -2,6 +2,10 @@ package cc.xpbootcamp.warmup.fibonacci;
 
 public class Fibonacci {
     public static long calculate(int position) {
+        if (position < 0) {
+            throw new PositionNoValidException();
+        }
+
         long result = 0;
 
         if (isTheFirstTwoPosition(position)) {

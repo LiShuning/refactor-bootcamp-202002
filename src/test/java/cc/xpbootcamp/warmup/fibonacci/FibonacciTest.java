@@ -44,4 +44,14 @@ public class FibonacciTest {
 
         assertEquals(expectedValue, actualValue);
     }
+
+    @Test
+    void should_return_12586269025L_when_calculate_given_position_50() {
+        int position = 50;
+        long expectedValue = 12586269025l;
+
+        long actualValue = Fibonacci.calculate(position);
+
+        assertEquals(expectedValue, actualValue);
+    }
 }

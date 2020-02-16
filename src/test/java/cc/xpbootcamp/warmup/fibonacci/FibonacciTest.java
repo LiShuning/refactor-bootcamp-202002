@@ -1,0 +1,17 @@
+package cc.xpbootcamp.warmup.fibonacci;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class FibonacciTest {
+    @Test
+    void should_return_1_when_calculate_given_position_1() {
+        int position = 1;
+        long expectedValue = 1;
+
+        long actualValue = Fibonacci.calculate(position);
+
+        assertEquals(expectedValue, actualValue);
+    }
+}
